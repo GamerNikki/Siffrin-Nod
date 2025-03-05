@@ -41,12 +41,11 @@ document.addEventListener("keydown", (event) => {
     if (event.key === "z") {
         document.querySelectorAll("video").forEach(video => {
             if (!video.paused && video.readyState >= 2) {
-                video.playbackRate = 2.0; // Speed up
+                video.playbackRate = 5.0; // Speed up
             }
         });
         gifElement.style.display = "block";
         dimOverlay.style.display = "block";
-        staticEffect.style.display = "block";
     }
 });
 
@@ -59,6 +58,5 @@ document.addEventListener("keyup", (event) => {
         });
         gifElement.style.display = "none";
         dimOverlay.style.display = "none";
-        staticEffect.style.display = "none";
     }
 });
